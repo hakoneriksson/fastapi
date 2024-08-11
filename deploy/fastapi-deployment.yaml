@@ -21,4 +21,4 @@ spec:
         ports:
         - name: http
           containerPort: 8000
-        image: ghcr.io/hakoneriksson/fastapi/fastapi:latest
+        image: ghcr.io/hakoneriksson/fastapi:latest
