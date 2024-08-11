@@ -22,3 +22,19 @@ spec:
         - name: http
           containerPort: 8000
         image: ghcr.io/hakoneriksson/fastapi:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi
+  labels:
+    run: fastapi
+spec:
+  ports:
+  - name: fastapi
+    port: 80
+    protocol: TCP
+    targetport: http
+  selector:
+    run: fastapi
+  type: LoadBalancer
