@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi
+  labels:
+    run: fastapi
+spec:
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetport: 8000
+  selector:
+    run: fastapi
+  type: LoadBalancer
