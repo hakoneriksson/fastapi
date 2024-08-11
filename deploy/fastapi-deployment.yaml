@@ -28,7 +28,7 @@ kind: Service
 metadata:
   name: fastapi
   labels:
-    run: fastapi
+    app: fastapi
 spec:
   ports:
   - name: fastapi
@@ -36,5 +36,5 @@ spec:
     protocol: TCP
     targetport: http
   selector:
-    run: fastapi
+    app: fastapi
   type: LoadBalancer
