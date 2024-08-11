@@ -2,9 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fastapi
+  labels:
+    app: fastapi
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: fastapi
@@ -16,5 +19,6 @@ spec:
       containers:
       - name: fastapi
         ports:
-        - containerPort: 8000
+        - name: http
+          containerPort: 8000
         image: ghcr.io/hakoneriksson/fastapi/fastapi:latest
