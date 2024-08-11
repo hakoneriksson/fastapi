@@ -32,7 +32,7 @@ metadata:
 spec:
   ports:
   - name: fastapi
-    port: 80
+    port: 8000
     protocol: TCP
     targetport: http
   selector:
