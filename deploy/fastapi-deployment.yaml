@@ -16,14 +16,14 @@ spec:
       labels:
         app: fastapi
     spec:
+      imagePullSecrets:
+      - name: ghcr-creds
       containers:
       - name: fastapi
         ports:
         - name: http
           containerPort: 8000
         image: ghcr.io/hakoneriksson/fastapi:latest
-      imagePullSecrets:
-      - name: ghcr-creds
 ---
 apiVersion: v1
 kind: Service
