@@ -5,7 +5,7 @@ metadata:
   labels:
     app: fastapi
 spec:
-  replicas: 10
+  replicas: 9
   strategy:
     type: Recreate
   selector:
