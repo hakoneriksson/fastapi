@@ -22,6 +22,8 @@ spec:
         - name: http
           containerPort: 8000
         image: ghcr.io/hakoneriksson/fastapi:latest
+      imagePullSecrets:
+      - name: ghcr-creds
 ---
 apiVersion: v1
 kind: Service
